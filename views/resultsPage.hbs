@@ -1,0 +1,27 @@
+<div class="container">
+    
+    {{#if hasContent}}
+    
+        {{#each articles}}
+
+            <div class="row mt-3 mb-2">
+                <h5><strong>{{this.title}}</strong></h5>   
+            </div>
+            <div class="row">
+                <img src={{this.imageUrl}} alt="">
+            </div>
+            <div class="row">
+                <h5>{{this.description}}</h5>
+            </div>
+            <div class="row">
+                <div class="col"><h5><small class="text-muted">{{this.publishDate}}</small></h5></div>
+                <div class="col"><a target="_blank" href={{this.newsUrl}}>Read</a></div>
+                
+            </div>             
+
+        {{/each}}
+    {{else}}
+    <h1 class="display-4">Your search has returned 0 results.</h1>
+    {{/if}}
+
+</div>
